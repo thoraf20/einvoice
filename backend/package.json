@@ -8,6 +8,7 @@
     "build": "./node_modules/.bin/tsc",
     "dev": "nodemon app.ts"
   },
+  "types": "module",
   "keywords": [
     "invoice",
     "receipt"
@@ -36,7 +37,8 @@
     "joi": "^17.6.0",
     "jsonwebtoken": "^8.5.1",
     "moment": "^2.29.1",
-    "mongoose": "^6.2.9"
+    "mongoose": "^6.2.9",
+    "winston": "^3.6.0"
   },
   "devDependencies": {
     "@tsconfig/node14": "^1.0.1",
