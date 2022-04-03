@@ -1,0 +1,14 @@
+{
+  "extends": "@tsconfig/node14/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./build"
+  },
+  "exclude": [
+    "node_modules",
+    "**/node_modules/*"
+  ],
+  "include": [
+    "app.ts",
+    "src/**/*"
+, "jest.config.ts"  ]
+}
