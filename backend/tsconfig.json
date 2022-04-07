@@ -10,5 +10,5 @@
   "include": [
     "app.ts",
     "src/**/*"
-  ]
+, "url.ts"  ]
 }

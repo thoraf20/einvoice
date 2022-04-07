@@ -4,11 +4,11 @@ import cookieParser from 'cookie-parser'
 import mongoose from 'mongoose'
 import cors from 'cors'
 import jwt from 'jsonwebtoken'
+import dotenv from 'dotenv'
 import httpStatus from 'http-status-codes'
 import logger from './src/lib/logger'
 import { requestLogger } from './src/middleware/requestLogger'
-
-import dotenv from 'dotenv'
+import v1Router from './url'
 
 dotenv.config()
 
@@ -40,6 +40,8 @@ app.use((req: Request, res: Response, next: NextFunction) => {
   res.locals.user = { _id: decoded?.sub }
   next()
 })
+
+app.use('/v1', v1Router)
 
 // 404
 app.use((req, res) => {

@@ -5,7 +5,7 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 const requestLogger = (req: Request, res: Response, next: NextFunction) => {
-  const log = `${req.method}: ${req.url} ${req.statusCode}`
+  const log = `${req.method}: ${req.url}`
   logger.http(log)
 
   next()
